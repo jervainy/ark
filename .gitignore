@@ -312,3 +312,5 @@ vite.config.mts.timestamp-*
 
 # Solid Start
 .vinxi
+
+bun.lock

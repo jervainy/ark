@@ -31,6 +31,7 @@
     "release": "changeset publish"
   },
   "dependencies": {
+    "flexsearch": "0.8.158",
     "root": "."
   },
   "devDependencies": {
