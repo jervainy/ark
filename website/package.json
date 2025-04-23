@@ -9,7 +9,7 @@
     "db:push": "prisma db push",
     "db:studio": "prisma studio",
     "db:reset": "prisma db push --force-reset",
-    "setup": "vc link --scope=chakra-ui -p ark-docs -y && vc env pull .env",
+    "setup": "vc link -p ark-docs -y && vc env pull .env",
     "setup:prod": "vc link --scope=chakra-ui -p ark-docs -y && vc env pull --environment production .env"
   },
   "dependencies": {

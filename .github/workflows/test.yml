@@ -1,0 +1,44 @@
+name: Publish
+
+on:
+  push:
+    paths:
+      - '.changeset/**'
+      - 'packages/**'
+    branches:
+      - develop
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.SAGE_PAT }}
+
+      - name: Install
+        uses: ./.github/composite-actions/install
+
+      - name: Build packages
+        run: bun run build
+
+      - name: Creating npmrc
+        run: |
+          cat << EOF > "$HOME/.npmrc"
+            $NPM_TOKEN
+          EOF
+          cat "$HOME/.npmrc"
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_CODING_SECRET }}
+
+      - name: Publish packages
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          publish: bun run release
+          commit: 'ci(changesets): version packages'
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
