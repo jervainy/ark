@@ -23,15 +23,19 @@ jobs:
 
       - name: Creating npmrc
         run: |
+          npm config set registry https://$NPM_REGISTRY
           cat << EOF > "$HOME/.npmrc"
-            registry=https://g-kaxr3066-npm.pkg.coding.net/marisource/npm/
+            registry=https://$NPM_REGISTRY
             always-auth=true
-            //g-kaxr3066-npm.pkg.coding.net/marisource/npm/:username=npm-1745373903142
-            //g-kaxr3066-npm.pkg.coding.net/marisource/npm/:_password=$NPM_TOKEN
-            //g-kaxr3066-npm.pkg.coding.net/marisource/npm/:email=jervainyang@outlook.com
+            //$NPM_REGISTRY:username=$NPM_USER
+            //$NPM_REGISTRY:_password=$NPM_TOKEN
+            //$NPM_REGISTRY:email=$NPM_MAIL
           EOF
         env:
           NPM_TOKEN: ${{ secrets.NPM_CODING_SECRET }}
+          NPM_REGISTRY: ${{ secrets.NPM_CODING_REGISTRY }}
+          NPM_USER: ${{ secrets.NPM_CODING_USER }}
+          NPM_MAIL: ${{ secrets.NPM_CODING_MAIL }}
 
       - name: Publish packages
         id: changesets
