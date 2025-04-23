@@ -24,7 +24,11 @@ jobs:
       - name: Creating npmrc
         run: |
           cat << EOF > "$HOME/.npmrc"
-            $NPM_TOKEN
+            registry=https://g-kaxr3066-npm.pkg.coding.net/marisource/npm/
+            always-auth=true
+            //g-kaxr3066-npm.pkg.coding.net/marisource/npm/:username=npm-1745373903142
+            //g-kaxr3066-npm.pkg.coding.net/marisource/npm/:_password=$NPM_TOKEN
+            //g-kaxr3066-npm.pkg.coding.net/marisource/npm/:email=jervainyang@outlook.com
           EOF
         env:
           NPM_TOKEN: ${{ secrets.NPM_CODING_SECRET }}
