@@ -26,7 +26,6 @@ jobs:
           cat << EOF > "$HOME/.npmrc"
             $NPM_TOKEN
           EOF
-          cat "$HOME/.npmrc"
         env:
           NPM_TOKEN: ${{ secrets.NPM_CODING_SECRET }}
 
