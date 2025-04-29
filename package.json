@@ -28,7 +28,7 @@
     "setup": "vc link --scope=chakra-ui -p ark-docs -y && vc env pull website/.env",
     "setup:prod": "vc link --scope=chakra-ui -p ark-docs -y && vc env pull --environment production website/.env",
     "version": "changeset version",
-    "release": "changeset publish"
+    "release": "npm config list && changeset publish"
   },
   "dependencies": {
     "flexsearch": "0.8.158",
