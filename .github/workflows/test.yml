@@ -15,11 +15,11 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install
-        uses: ./.github/composite-actions/install
-
-      - name: Build packages
-        run: bun run build
+#      - name: Install
+#        uses: ./.github/composite-actions/install
+#
+#      - name: Build packages
+#        run: bun run build
 
       - name: Creating npmrc
         run: |
@@ -40,6 +40,7 @@ jobs:
       - name: Check npmrc
         run: |
           npm config list
+          cat $HOME/.npmrc
 
 #      - name: Publish packages
 #        id: changesets
