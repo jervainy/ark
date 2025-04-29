@@ -29,7 +29,7 @@ jobs:
             always-auth=true
             //$NPM_REGISTRY:username=$NPM_USER
             //$NPM_REGISTRY:_password=$NPM_TOKEN
-            //$NPM_REGISTRY:email=$NPM_MAIL
+            //g-kaxr3066-npm.pkg.coding.net/marisource/npm/:email=$NPM_MAIL
           EOF
         env:
           NPM_TOKEN: ${{ secrets.NPM_CODING_SECRET }}
