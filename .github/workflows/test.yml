@@ -15,11 +15,11 @@ jobs:
         with:
           fetch-depth: 0
 
-#      - name: Install
-#        uses: ./.github/composite-actions/install
-#
-#      - name: Build packages
-#        run: bun run build
+      - name: Install
+        uses: ./.github/composite-actions/install
+
+      - name: Build packages
+        run: bun run build
 
       - name: Creating npmrc
         run: |
@@ -41,13 +41,12 @@ jobs:
         run: |
           npm config list
           cat $HOME/.npmrc
-          echo 'g-kaxr3066-npm.pkg.coding.net/marisource/npm/'
 
-#      - name: Publish packages
-#        id: changesets
-#        uses: Jervain-Y/changesets-action@v1.4.10
-#        with:
-#          publish: bun run release
-#          commit: 'ci(changesets): version packages'
-#        env:
-#          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: Publish packages
+        id: changesets
+        uses: Jervain-Y/changesets-action@v1.4.10
+        with:
+          publish: bun run release
+          commit: 'ci(changesets): version packages'
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
