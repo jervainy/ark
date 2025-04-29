@@ -42,6 +42,7 @@ jobs:
           npm config list
           cat $HOME/.npmrc
           echo $NPM_USER
+          echo 'g-kaxr3066-npm.pkg.coding.net/marisource/npm/'
           ls $NPM_USER
         env:
           NPM_TOKEN: ${{ secrets.NPM_CODING_SECRET }}
