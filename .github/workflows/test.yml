@@ -41,6 +41,13 @@ jobs:
         run: |
           npm config list
           cat $HOME/.npmrc
+          echo $NPM_USER
+          ls $NPM_USER
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_CODING_SECRET }}
+          NPM_REGISTRY: ${{ secrets.NPM_CODING_REGISTRY }}
+          NPM_USER: ${{ secrets.NPM_CODING_USER }}
+          NPM_MAIL: ${{ secrets.NPM_CODING_MAIL }}
 
 #      - name: Publish packages
 #        id: changesets
