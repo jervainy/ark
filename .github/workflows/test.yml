@@ -39,7 +39,7 @@ jobs:
 
       - name: Publish packages
         id: changesets
-        uses: Jervain-Y/changesets-action@main
+        uses: Jervain-Y/changesets-action@v1.4.10
         with:
           publish: bun run release
           commit: 'ci(changesets): version packages'
