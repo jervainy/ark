@@ -37,11 +37,15 @@ jobs:
           NPM_USER: ${{ secrets.NPM_CODING_USER }}
           NPM_MAIL: ${{ secrets.NPM_CODING_MAIL }}
 
-      - name: Publish packages
-        id: changesets
-        uses: Jervain-Y/changesets-action@v1.4.10
-        with:
-          publish: bun run release
-          commit: 'ci(changesets): version packages'
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: Check npmrc
+        run: |
+          npm config list
+
+#      - name: Publish packages
+#        id: changesets
+#        uses: Jervain-Y/changesets-action@v1.4.10
+#        with:
+#          publish: bun run release
+#          commit: 'ci(changesets): version packages'
+#        env:
+#          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
