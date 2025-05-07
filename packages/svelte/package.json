@@ -1,5 +1,5 @@
 {
-  "name": "@ark-ui/svelte",
+  "name": "@mas-ui/svelte",
   "type": "module",
   "version": "0.4.0",
   "description": "A collection of unstyled, accessible UI components for Svelte",

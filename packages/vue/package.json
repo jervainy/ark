@@ -1,5 +1,5 @@
 {
-  "name": "@ark-ui/vue",
+  "name": "@mas-ui/vue",
   "type": "module",
   "version": "5.7.0",
   "description": "A collection of unstyled, accessible UI components for Vue, utilizing state machines for seamless interaction.",
