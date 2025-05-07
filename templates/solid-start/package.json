@@ -9,7 +9,7 @@
     "version": "vinxi version"
   },
   "dependencies": {
-    "@mas-ui/solid": "workspace*",
+    "@mas-ui/solid": "workspace:*",
     "@solidjs/meta": "0.29.4",
     "@solidjs/router": "0.15.3",
     "@solidjs/start": "1.1.3",
