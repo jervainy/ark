@@ -4,5 +4,5 @@
   "commit": false,
   "access": "restricted",
   "baseBranch": "main",
-  "ignore": ["@ark-ui/next-js", "@ark-ui/nuxt", "@ark-ui/scripts", "@ark-ui/solid-start", "@ark-ui/website"]
+  "ignore": ["@mas-ui/next-js", "@mas-ui/nuxt", "@mas-ui/scripts", "@mas-ui/solid-start", "@mas-ui/website"]
 }
