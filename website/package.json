@@ -1,5 +1,5 @@
 {
-  "name": "@ark-ui/website",
+  "name": "@mas-ui/website",
   "private": true,
   "scripts": {
     "prepare": "bun panda codegen && prisma generate",
@@ -13,7 +13,7 @@
     "setup:prod": "vc link --scope=chakra-ui -p ark-docs -y && vc env pull --environment production .env"
   },
   "dependencies": {
-    "@ark-ui/react": "workspace:*",
+    "@mas-ui/react": "workspace:*",
     "@auth/prisma-adapter": "2.9.0",
     "@biomejs/biome": "1.9.4",
     "@effect/schema": "0.75.5",

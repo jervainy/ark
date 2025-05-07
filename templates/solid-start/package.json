@@ -1,5 +1,5 @@
 {
-  "name": "@ark-ui/solid-start",
+  "name": "@mas-ui/solid-start",
   "type": "module",
   "private": true,
   "scripts": {
@@ -9,7 +9,7 @@
     "version": "vinxi version"
   },
   "dependencies": {
-    "@ark-ui/solid": "workspace*",
+    "@mas-ui/solid": "workspace*",
     "@solidjs/meta": "0.29.4",
     "@solidjs/router": "0.15.3",
     "@solidjs/start": "1.1.3",

@@ -1,5 +1,5 @@
 {
-  "name": "@ark-ui/next-js",
+  "name": "@mas-ui/next-js",
   "type": "module",
   "private": true,
   "scripts": {
@@ -8,7 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@ark-ui/react": "workspace:*",
+    "@mas-ui/react": "workspace:*",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "next": "15.3.1"
